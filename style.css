@@ -1,0 +1,83 @@
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+
+#form-container {
+    background: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#form-container h2 {
+    border-bottom: 2px solid #003366;
+    padding-bottom: 5px;
+    color: #003366;
+    margin-top: 30px;
+}
+
+#form-container h3 {
+    margin-top: 20px;
+    color: #555;
+}
+
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+#generateBtn {
+    background-color: #003366;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 30px;
+    transition: background 0.3s ease;
+}
+
+#generateBtn:hover {
+    background-color: #002244;
+}
+
+
+br {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator Website</title>
+    <link rel="stylesheet" href="style.css" id="main-theme">
+    <link rel="stylesheet" href="resume.css" id="resume-theme" disabled>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 30px;">Resume Generator</h1>
+
+    <div id="form-container">
+        <h2>Enter your details</h2>
+        <form id="resumeForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <br>
+            
+            <label for="Role">Role: </label>
+            <input type="text" id="role" name="position" required>
+
+            <label for="branch">branch:</label>
+            <input type="text" id="branch" name="branch" required>
+
+            <label for="college">College: </label>
+            <input type="text" id="college" name="college" required>
+
+            <br><br>
+
+            <label for="about">About Me:</label>
+            <textarea id="about" name="about" rows="4" required></textarea>
+
+            <br><br>
+
+            <h2>Work Experience: </h2>
+            <label for="company-role">Role: </label>
+            <input type="text" id="company-role" name="company-role" required>
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="company" required>
+            <br>
+            <label for="duration">Duration:</label>
+            <input type="text" id="duration" name="duration" required>
+            <br>
+            <label for="project-details">project detail did during internship: </label>
+            <textarea id="project-details" name="description" rows="4" required></textarea>
+            <br>
+            <label for="project-description">Describe Project: </label>
+            <textarea id="project-description" name="project-description" rows="4" required></textarea>
+
+
+            <br><br>
+            <h2>Projects</h2>
+            <h3>1st Project</h3>
+            <label for="project1-name">Project Name:</label>
+            <input type="text" id="project1-name" name="project1-name" required>
+            <label for="project1-description">Project Description:</label>
+            <textarea id="project1-description" name="project1-description" rows="4" required></textarea>
+            <br>
+            <h3>2nd Project</h3>
+            <label for="project2-name">Project Name:</label>
+            <input type="text" id="project2-name" name="project2-name"  required>
+            <label for="project2-description">Project Description:</label>
+            <textarea id="project2-description" name="project2-description" rows="4" required></textarea>
+
+            <br>
+            <br>
+
+            <h2>Education</h2>
+            <label for="education1">Education 1:</label>    
+            <input type="text" id="education1" name="education1" required>
+            <label for="institute1">Institute Name:</label> 
+            <input type="text" id="institute1" name="institute1" required>
+
+            <br>
+
+            <label for="education2">Education 2:</label>
+            <input type="text" id="education2" name="education2" required>
+            <label for="institute2">Institute Name:</label>
+            <input type="text" id="institute2" name="institute2" required>
+
+            <h2>Skills</h2>
+            <label for="languages">Languages (comma separated): </label>
+            <input type="text" id="languages" name="languages" required><br>
+            <label for="frameworks">Frameworks (comma separated): </label>
+            <input type="text" id="frameworks" name="frameworks" required><br>
+            <label for="core">Core Skills (comma separated): </label>   
+            <input type="text" id="core" name="core" required><br>
+            <label for="tools">Tools (comma separated): </label>
+            <input type="text" id="tools" name="tools" required><br>
+
+            <h3>Links: </h3>
+            <label for="linkedin">LinkedIn:</label>
+            <input type="url" id="linkedin" name="linkedin" required><br>
+            <label for="github">GitHub:</label>
+            <input type="url" id="github" name="github" required><br>
+            <label for="leetcode">LeetCode:</label>
+            <input type="url" id="leetcode" name="leetcode" required><br>
+            <label for="twitter">Twitter:</label>
+            <input type="url" id="twitter" name="twitter" required><br>
+
+
+            <br><br>
+        <button type="button" id="generateBtn">Generate</button>
+    </div>
+
+    <hr>
+    
+    <div id="resume-display" style="display: none;">
+    <div class="resume-container">
+        <header>
+            <h1 id="r-name">SHUBHAM MODI</h1> 
+            <p id="r-subtitle" class="subtitle">Web Development Intern | B.Tech IT student at BIT Sindri</p> 
+            <div id="r-contact" class="contact-info">
+                <span>📞 7979030902</span> <span>📧 shubhambarnwal7764@gmail.com</span> <span>🔗 LinkedIn</span>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <div class="left-col">
+                <section>
+                    <h2 class="section-title">ABOUT ME</h2> 
+                    <p id="r-about">Aspiring Full Stack Developer...</p>
+                </section>
+
+                <section>
+                    <h2 class="section-title">WORK EXPERIENCE</h2> 
+                    <div class="entry">
+                        <h3 id="r-work-title">Web Developer Intern | Briztech Infosystems</h3> 
+                        <p id="r-work-date" class="date">Sept 2024 - Oct 2024</p> 
+                        <ul id="r-work-desc">
+                            <li>Developed a portfolio and Netflix clone.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="project-details">
+                    <h2 class="section-title">PROJECTS</h2> 
+                    <div class="entry">
+                        <h3 id="r-proj1-title">Logic-Driven Applications</h3> 
+                        <p id="r-proj1-desc">Project details here...</p>
+                    </div>
+                    <div class="entry">
+                        <h3 id="r-proj2-title">Data Structures & Algorithms</h3> 
+                        <p id="r-proj2-desc">Solved 150+ challenges...</p>
+                    </div>
+                </section>
+            </div>
+
+
+            <div class="right-col">
+                <section>
+                    <h2 class="section-title">EDUCATION</h2> <div class="entry">
+                        <h3 id="r-edu-1">B.Tech in IT</h3> 
+                        <p id="ins-name-1">BIT Sindri (2028)</p> 
+                    </div>
+                    <div class="entry">
+                        <h3 id="r-edu-2">Diploma in C.S.E</h3> 
+                        <p id="ins-name-2">GP Ranchi (8.0 CGPA)</p> 
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="section-title" id="r-skill">SKILLS</h2> 
+                    <ul class="skills-list">
+                        <li id="r-lang"><strong>Languages:</strong> JS, Java, SQL </li>
+                        <li id="r-frame"><strong>Frameworks:</strong> React, Node, Express, MongoDB</li>
+                        <li id="r-core"><strong>Core:</strong> DSA, OOPs, JDBC </li>
+                        <li id="r-tools"><strong>Tools:</strong> Git, GitHub </li>
+                    </ul>
+                </section>
+
+            </div>
+
+        </div>
+        <footer>
+            <div class="footer-content">
+                <p id="r-foot">&copy; 2026 SHUBHAM MODI | Aspiring Full Stack Developer</p> 
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/your-profile" target="_blank" id="r-linkedin">LinkedIn</a> 
+                    <a href="https://github.com/Shubhammodi7" target="_blank" id="r-git">GitHub</a> 
+                    <a href="https://leetcode.com/Shubhammodi7" target="_blank" id="r-leet">LeetCode</a> 
+                    <a href="https://twitter.com/your-handle" target="_blank" id="r-x">Twitter</a>
+                </div>
+        </div>
+        </footer>
+
+     </div> 
+        <button type="button" id="downloadBtn">Download PDF</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</body>
+</html>
