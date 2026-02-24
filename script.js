@@ -101,7 +101,7 @@ document.getElementById('downloadBtn').addEventListener('click', () => {
         filename: 'Resume_Shubham_Modi.pdf',
         image: { type: 'jpeg', quality: 1 },
         html2canvas: { 
-            scale: 2, // High resolution
+            scale: 1.5, // High resolution
             useCORS: true,
             scrollY: 0
         },
