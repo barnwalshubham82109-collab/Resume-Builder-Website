@@ -94,27 +94,27 @@ document.getElementById('generateBtn').addEventListener('click', () => {
 //     });
 
 document.getElementById('downloadBtn').addEventListener('click', () => {
-    const element = document.querySelector('.resume-container'); 
-
-    // Step 1: Force full height and remove any scrolling limitations temporarily
-    const originalStyle = element.style.height;
-    element.style.height = 'auto';
-
+    const element = document.querySelector('.resume-container');
+    
     const opt = {
-        margin:       0,
-        filename:     `${document.getElementById('name').value}_Resume.pdf`,
-        image:        { type: 'jpeg', quality: 1 },
-        html2canvas:  { 
-            scale: 2, 
-            useCORS: true, 
-            scrollY: 0, // Ensures it starts from the top
-            windowHeight: element.scrollHeight // Captures full scrolled height
+        margin: 0,
+        filename: 'Resume_Shubham_Modi.pdf',
+        image: { type: 'jpeg', quality: 1 },
+        html2canvas: { 
+            scale: 2, // High resolution
+            useCORS: true,
+            scrollY: 0
         },
-        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+        jsPDF: { 
+            unit: 'mm', 
+            format: 'a4', 
+            orientation: 'portrait',
+            // This is the "magic" line: it prevents the library 
+            // from splitting content across pages.
+            compress: true 
+        }
     };
 
-    // Step 2: Convert and then reset the style
-    html2pdf().set(opt).from(element).save().then(() => {
-        element.style.height = originalStyle;
-    });
+    // New logic to ensure one-page fit without losing data
+    html2pdf().set(opt).from(element).toContainer().toCanvas().toImg().toPdf().save();
 });
