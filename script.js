@@ -118,3 +118,5 @@ document.getElementById('downloadBtn').addEventListener('click', () => {
     // New logic to ensure one-page fit without losing data
     html2pdf().set(opt).from(element).toContainer().toCanvas().toImg().toPdf().save();
 });
+
+console.log("shubham modi")
